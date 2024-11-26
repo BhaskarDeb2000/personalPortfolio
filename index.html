@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header>
     <div class="logo">
-        <h1>BHASKAR DEB</h1>
+        <a href="#"><h1>BHASKAR DEB</h1></a>
     </div>
     <nav aria-label="Main navigation">
         <ul>
@@ -30,40 +29,42 @@
     <section class="banner">
         <h1>Welcome to My Portfolio</h1>
     </section>
-    <section id="projects">
 
+    <section id="projects">
         <h2>Projects</h2>
         <div class="section-content">
+            <!-- Project Cards -->
             <div class="project-card">
                 <img src="./imgs/pokemon-icon.webp" alt="Pokèmon">
-                <h3>Pokèmon Info app</h3>
+                <h3>Pokèmon Info App</h3>
                 <p>Fetches data from Pokémon API.</p>
                 <a href="https://github.com/BhaskarDeb2000/PokemonApp" class="read-more" target="_blank">View on GitHub</a>
             </div>
             <div class="project-card">
                 <img src="./imgs/dog logo.png" alt="Dog logo">
                 <h3>Dog Image Generator</h3>
-                <p>This app, built with Express.js and Node.js, fetches a random dog image from the Dog CEO API. Users can click to fetch another image.</p>
+                <p>Fetch random dog images with Node.js and Express.js.</p>
                 <a href="https://github.com/BhaskarDeb2000/random-dog-image-generator" class="read-more" target="_blank">View on GitHub</a>
             </div>
             <div class="project-card">
                 <img src="./imgs/Finance logo.png" alt="Finance logo">
-                <h3>FullStack Finance Tracker</h3>
-                <p>It is a streamlined web app designed to help users track their expenses easily.</p>
+                <h3>Finance Tracker</h3>
+                <p>Track expenses easily with this web app.</p>
                 <a href="https://github.com/BhaskarDeb2000/fullStack-financeTracker" class="read-more" target="_blank">View on GitHub</a>
             </div>
         </div>
     </section>
-    <section id="about">
 
+    <section id="about">
         <h2>About Me</h2>
-        <div class="section-content" id="aboutMe">
-            <img src="./imgs/about me.jpg" alt="About Me Image" width="300px">
+        <div id="aboutMe">
+            <img src="./imgs/about me.jpg" alt="About Me Image">
             <p>Hello I’m Bhaskar Deb, a passionate and driven student at Business College Helsinki, where I’m diving into the world of technology and honing my skills in Full-Stack Development. Alongside my studies, I’ve been teaching myself HTML, CSS, JavaScript, and React, striving to bring my dream of becoming a successful developer to life.
 My journey into coding has been a solo adventure, filled with late nights, countless challenges, and endless learning, but I wouldn’t trade it for anything. With each project, I’m building my skills, expanding my knowledge, and getting one step closer to a career where I can create impactful, innovative web applications.</p>
         </div>
     </section>
-    <section id="skills">
+
+     <section id="skills">
 
         <h2>Skills</h2>
         <div class="skills-container">
@@ -123,7 +124,8 @@ My journey into coding has been a solo adventure, filled with late nights, count
             </div>
         </div>
     </section>
-    <section id="gallery">
+
+ <section id="gallery">
 
         <h2>Gallery</h2>
         <div class="gallery-grid">
@@ -141,8 +143,7 @@ My journey into coding has been a solo adventure, filled with late nights, count
             <div class="grid-item"><img src="./imgs/img12.jpg" alt="Gallery Image 12"></div>
         </div>
     </section>
-
-    <footer id="contact">
+ <footer id="contact">
         <h2>Contact Me</h2>
         <div class="contact-form">
             <form id="contactForm" action="https://formspree.io/f/xkgnjjdn" method="POST">
@@ -165,6 +166,6 @@ My journey into coding has been a solo adventure, filled with late nights, count
     <button class="back-to-top" aria-label="Back to top">↑</button>
 </main>
 
-<script src="script.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>

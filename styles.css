@@ -1,4 +1,4 @@
-/* Universal Reset */
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 
-/* Body Styling */
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -14,12 +14,7 @@ body {
     color: #393939;
 }
 
-/* Logo Styling */
-.logo {
-    color: #e0e0e0;
-}
 
-/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -30,9 +25,15 @@ header {
     width: 100%;
     top: 0;
     z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(51, 51, 51, 0.9);
 }
 
 header h1 {
+    color: white;
     font-size: 1.8em;
 }
 
@@ -42,7 +43,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1.25rem; /* 20px */
+    margin-left: 1.25rem;
 }
 
 nav ul li a {
@@ -55,10 +56,17 @@ nav ul li a:hover {
 }
 
 .mobile-menu {
-    display: none; /* Hidden by default, show in mobile */
+    display: none;
+    font-size: 1.5rem;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-/* Banner */
+
 .banner {
     background: url('./imgs/Cover Img.jpeg') no-repeat center center / cover;
     height: 37.5vh;
@@ -88,7 +96,7 @@ nav ul li a:hover {
     z-index: 2;
 }
 
-/* Section Styling */
+
 section {
     padding: 3.75rem 1.25rem;
     max-width: 75rem;
@@ -98,239 +106,223 @@ section {
 h2 {
     font-size: 2.5em;
     margin-bottom: 1.25rem;
-    margin-top: 86px;
+margin-top: 25px;
 }
 
-/* Projects Section */
+
 .section-content {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 1.5rem;
 }
 
 .project-card {
     background: white;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
-    padding: 1.25rem;
-    flex: 1 1 calc(30% - 2rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: calc(33.333% - 20px);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 5px;
     height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
 }
 
 .project-card h3 {
     font-size: 1.5em;
-    margin: 0.5rem 0;
+    margin: 1rem 0 0.5rem;
 }
 
 .project-card p {
-    flex-grow: 1;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 .project-card .read-more {
-    align-self: flex-end;
-    background-color: #f57c00;
-    color: white;
-    padding: 0.5rem 1rem;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
+    color: #333;
     text-decoration: none;
-    transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 .project-card .read-more:hover {
-    background-color: #e67e22;
+    text-decoration: underline;
 }
 
-/* Skills Section */
+
+#aboutMe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+
+#aboutMe img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#aboutMe p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
 .skills-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .skill {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0; /* Vertical spacing */
-}
-
-.skill-info {
-    display: flex;
-    align-items: center;
-    width: 50%; /* Adjust width to fit icons */
-}
-
-.skill-info i {
-    font-size: 2em; /* Adjust icon size */
-    margin-right: 1rem; /* Space between icon and title */
+    flex: 1;
+    max-width: calc(33.333% - 20px);
 }
 
 .progress-bar {
-    background: #e0e0e0;
+    background: #ddd;
     border-radius: 5px;
-    width: 50%;
-    margin-left: 1rem;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 5px;
 }
 
 .progress {
-    background: #76c7c0;
-    height: 1em; /* Height of progress bar */
+    background: #4caf50;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid .grid-item img {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
-/* About Section Background */
-#aboutMe {
-    display: inline-block; /* Corrected display property */
-    font-size: 20px;
-}
 
-/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 3.125rem; /* 50px */
+    padding: 20px 15px;
+    margin-top: 20px;
 }
 
-.contact-form {
-    max-width: 37.5rem; /* 600px */
-    margin: 0 auto 1.25rem; /* 20px */
+footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
-.contact-form h2 {
-    margin-bottom: 1.25rem; /* 20px */
-    font-size: 2em;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9375rem; /* 15px */
-}
-
-.contact-form label {
+footer form {
+    max-width: 600px;
+    margin: 0 auto;
     text-align: left;
-    font-size: 1.2em;
 }
 
-.contact-form input,
-.contact-form textarea {
+footer form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+footer form input,
+footer form textarea {
     width: 100%;
-    padding: 0.625rem; /* 10px */
-    font-size: 1em;
-    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
-.contact-form button {
-    padding: 0.625rem 1.25rem; /* 10px 20px */
-    background-color: #f57c00;
+footer form button {
+    background-color: #ff7043;
     color: white;
     border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
     border-radius: 5px;
-    font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #e67e22;
+footer form button:hover {
+    background-color: #e64a19;
 }
 
 footer p {
-    margin-top: 1.25rem; /* 20px */
-    font-size: 0.9em;
-    color: #ccc;
+    margin-top: 20px;
+    font-size: 0.9rem;
 }
 
-/* Back to Top Button */
+footer a {
+    color: #ff7043;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
 .back-to-top {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: #f57c00;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #333;
     color: white;
     border: none;
-    border-radius: 50%;
-    padding: 1rem;
-    display: none; /* Hidden by default */
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.back-to-top:hover {
-    background-color: #e67e22;
-}
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .project-card {
-        flex: 1 1 calc(45% - 2rem); /* 2 cards in a row */
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid items for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
+    .mobile-menu {
+        display: block;
     }
 
     nav ul {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
-        margin-top: 0.625rem; /* 10px */
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 1rem;
+        border-radius: 5px;
+        z-index: 100;
+    }
+
+    nav ul.active {
+        display: flex;
     }
 
     nav ul li {
-        margin: 0.5rem 0; /* Vertical spacing */
+        margin: 0.5rem 0;
     }
 
-    .project-card {
-        flex: 1 1 100%; /* Full width */
+    nav ul li a {
+        font-size: 1.2rem;
     }
-
-    .gallery-grid {
-        grid-template-columns: 1fr; /* One item per row on very small screens */
-    }
-
-    .mobile-menu {
-        display: block; /* Show mobile menu button */
-    }
-}
-
-/* Gallery Section */
-#gallery {
-    padding: 3.75rem 1.25rem; /* 60px 20px */
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 1rem; /* Space between grid items */
-}
-
-.grid-item {
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
